@@ -23,7 +23,7 @@ app.use("/api/v1", userRouter);
 app.use(errorHandler);
 
 app.get("/", (req, res) => {
-  res.send("Hello From Server");
+  res.json({ message: "Welcome to user API" });
 });
 
 app.all("*", (req, res) => {
