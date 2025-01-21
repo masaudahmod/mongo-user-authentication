@@ -5,17 +5,17 @@ const origin = ["http://localhost:8000"];
 
 const PORT = process.env.PORT || 8000;
 const DBURL = process.env.DBURL || "mongodb+srv://admin:XCSeJpVTyFiaiYUi@usera.6xice.mongodb.net/users?retryWrites=true&w=majority&appName=userA";
-const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_SECRET = process.env.JWT_SECRET || I65Knn7lBv;
 
-const ACCESSTOKEN_SECRET = process.env.ACCESSTOKEN_SECRET;
-const ACCESSTOKEN_EXPIRE = process.env.ACCESSTOKEN_EXPIRE;
+const ACCESSTOKEN_SECRET = process.env.ACCESSTOKEN_SECRET || 0VW3W2door;
+const ACCESSTOKEN_EXPIRE = process.env.ACCESSTOKEN_EXPIRE || 1d;
 
-const REFRESHTOKEN_SECRET = process.env.REFRESHTOKEN_SECRET;
-const REFRESHTOKEN_EXPIRE = process.env.REFRESHTOKEN_EXPIRE;
+const REFRESHTOKEN_SECRET = process.env.REFRESHTOKEN_SECRET || 0VW3W2door;
+const REFRESHTOKEN_EXPIRE = process.env.REFRESHTOKEN_EXPIRE || 30d;
 
-const CLOUD_NAME = process.env.CLOUD_NAME;
-const CLOUD_API_KEY = process.env.CLOUD_API_KEY;
-const CLOUD_API_SECRET = process.env.CLOUD_API_SECRET;
+const CLOUD_NAME = process.env.CLOUD_NAME || db2less4s;
+const CLOUD_API_KEY = process.env.CLOUD_API_KEY || 159667721886788;
+const CLOUD_API_SECRET = process.env.CLOUD_API_SECRET || kCBy5xZ606cBNBL3GoT_ZSnwHLg;
 
 export {
   PORT,
