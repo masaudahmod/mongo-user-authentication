@@ -22,8 +22,8 @@ app.use("/api/v1", userRouter);
 
 app.use(errorHandler);
 
-app.get("/test", (req, res) => {
-  res.send("Hello World!");
+app.get("/", (req, res) => {
+  res.send("Hello From Server");
 });
 
 app.all("*", (req, res) => {
