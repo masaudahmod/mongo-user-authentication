@@ -4,7 +4,7 @@ dotenv.config();
 const origin = ["http://localhost:8000"];
 
 const PORT = process.env.PORT || 8000;
-const DBURL = process.env.DBURL;
+const DBURL = process.env.DBURL || "mongodb+srv://admin:XCSeJpVTyFiaiYUi@usera.6xice.mongodb.net/users?retryWrites=true&w=majority&appName=userA";
 const JWT_SECRET = process.env.JWT_SECRET;
 
 const ACCESSTOKEN_SECRET = process.env.ACCESSTOKEN_SECRET;
