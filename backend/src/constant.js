@@ -1,7 +1,7 @@
 import * as dotenv from "dotenv";
 dotenv.config();
 
-const origin = ["http://localhost:8000"];
+const origin = ["https://mongo-user-authentication.vercel.app/"];
 
 const PORT = process.env.PORT || 8000;
 const DBURL = process.env.DBURL || "mongodb+srv://admin:XCSeJpVTyFiaiYUi@usera.6xice.mongodb.net/users?retryWrites=true&w=majority&appName=userA";
