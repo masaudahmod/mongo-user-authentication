@@ -2,6 +2,7 @@ import express from "express";
 import {
   changePassword,
   createUser,
+  getUsers,
   login,
   logout,
   mailverification,
@@ -13,7 +14,7 @@ import { auth } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
-router.route("/users").post(createUser);
+router.route("/users").get(auth, getUsers).post(createUser);
 router.route("/users/verify/:token").get(mailverification);
 router.route("/users/login").post(login);
 router.route("/users/update").post(auth, upload.single("avatar"), updateProfile);

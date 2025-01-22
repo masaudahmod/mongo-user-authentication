@@ -126,9 +126,7 @@ const mailverification = async (req, res) => {
       { new: true }
     );
 
-    return res
-      .status(201)
-      .send( "Email verified successfully" );
+    return res.status(201).send("Email verified successfully");
   } catch (error) {
     console.error("Error in mailverification:", error.message);
     return res.status(500).json({ message: "Internal server error" });
@@ -170,7 +168,7 @@ const login = tryCatch(async (req, res) => {
     })
   );
 });
- 
+
 const updateProfile = tryCatch(async (req, res) => {
   const updates = {};
   if (req.file) {
@@ -272,6 +270,11 @@ const refreshAccessToken = tryCatch(async (req, res) => {
   );
 });
 
+const getUsers = tryCatch(async (req, res) => {
+  const users = await User.find();
+  return res.json(new ApiSuccess(200, "Users fetched successfully", { users }));
+});
+
 export {
   createUser,
   mailverification,
@@ -280,4 +283,5 @@ export {
   logout,
   changePassword,
   refreshAccessToken,
+  getUsers,
 };
