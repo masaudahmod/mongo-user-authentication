@@ -1,7 +1,7 @@
 import * as dotenv from "dotenv";
 dotenv.config();
 
-const origin = process.env.NODE_ENV === "production" ? process.env.PRODUCTION : process.env.DEVELOPMENT;
+const origin = process.env.PRODUCTION;
 
 const PORT = process.env.PORT;
 const DBURL = process.env.PRODUCTION;
